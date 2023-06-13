@@ -17,3 +17,13 @@ const prepareAndStartServer = () => {
 }
 
 prepareAndStartServer();
+
+// const bcrypt = require('bcrypt');
+
+// const password = 'myPassword';
+// const saltRounds = 9;
+
+// const salt = bcrypt.genSaltSync(saltRounds);
+// const hash = bcrypt.hashSync(password, salt);
+
+// console.log('Hashed password:', hash);
