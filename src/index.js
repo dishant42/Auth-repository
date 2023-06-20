@@ -32,9 +32,9 @@ const prepareAndStartServer = () => {
     console.log(tokencreation); 
     */
 
-    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yZW8xMjNAZ21haWwuY29tICIsImlkIjo0LCJpYXQiOjE2ODY4OTg5NzEsImV4cCI6MTY4Njk4NTM3MX0.wZEyZG8jC21O5EW6Zt49vjYBOuVhA2oYG33fbEWaVWA";
-    const tokenverificaton=userservice.verifyToken(token);
-    console.log(tokenverificaton);
+    // const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yZW8xMjNAZ21haWwuY29tICIsImlkIjo0LCJpYXQiOjE2ODY4OTg5NzEsImV4cCI6MTY4Njk4NTM3MX0.wZEyZG8jC21O5EW6Zt49vjYBOuVhA2oYG33fbEWaVWA";
+    // const tokenverificaton=userservice.verifyToken(token);
+    // console.log(tokenverificaton);
 
     console.log(`server started on Port ${PORT}`);
   })
