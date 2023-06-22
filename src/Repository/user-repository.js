@@ -1,4 +1,4 @@
-const {user}=require("../models/index");
+const {user,Role}=require("../models/index");
 
 class UserRepository{
 
@@ -45,6 +45,22 @@ class UserRepository{
                     email:email
                 }
             })
+            return result;
+        } catch (error) {
+            console.log("Something went wrong on repository layer");
+            throw error;
+        }
+    }
+
+    async isAdmin(userid){
+        try {
+            const User=await user.findByPk(userid);
+            const people_having_adminrole=await Role.findOne({
+                where:{
+                    name:"ADMIN"
+                }
+            })
+            const result=await User.hasRole(people_having_adminrole);
             return result;
         } catch (error) {
             console.log("Something went wrong on repository layer");

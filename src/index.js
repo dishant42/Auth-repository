@@ -6,7 +6,7 @@ const apiroutes = require("./routes/index");
 const app = express();
 
 const db=require("./models/index")
-
+const {user,Role}=require("./models/index");
 
 
 const prepareAndStartServer = () => {
@@ -21,8 +21,10 @@ const prepareAndStartServer = () => {
     if(process.env.DB_SYNC){
       db.sequelize.sync({alter:true})
     }
-  
-
+    // const User=await user.findByPk(1);
+    // const role=await Role.findByPk(1);
+    //  User.addRole(role);
+    
 
     console.log(`server started on Port ${PORT}`);
   })
