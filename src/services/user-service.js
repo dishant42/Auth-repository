@@ -15,6 +15,9 @@ class UserService {
             const response = this.userRepository.create(data);
             return response;
         } catch (error) {
+            if(error.name == 'SequelizeValidationError') {
+                throw error;
+            }
             console.log("Something went wrong in the service layer");
             throw error;
         }
@@ -65,6 +68,9 @@ class UserService {
             }
 
          catch (error) {
+            if(error.name=='Attribute not found'){
+                throw error;
+            }
             console.log("Something went wrong in signin process");
             throw error;
         }
